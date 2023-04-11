@@ -5,6 +5,7 @@ import com.seojs.simpleboard.web.dto.PostsResponseDto;
 import com.seojs.simpleboard.web.dto.PostsSaveRequestDto;
 import com.seojs.simpleboard.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
