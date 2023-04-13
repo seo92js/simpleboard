@@ -26,6 +26,7 @@ dependencies {
 	implementation 'com.h2database:h2'
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 	compileOnly 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
