@@ -1,5 +1,6 @@
 package com.seojs.simpleboard.web;
 
+import com.seojs.simpleboard.config.auth.LoginUser;
 import com.seojs.simpleboard.config.auth.dto.SessionUser;
 import com.seojs.simpleboard.service.posts.PostsService;
 import com.seojs.simpleboard.web.dto.PostsResponseDto;
@@ -16,12 +17,10 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if(user != null){
             model.addAttribute("loginUserName", user.getName());
