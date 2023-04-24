@@ -40,10 +40,10 @@ dependencies {
 	testImplementation("org.springframework.security:spring-security-test") // 권한 관련
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
+jar {
+	enabled=false
 }
 
-tasks.named('jar'){
-	enabled=false
+tasks.named('test') {
+	useJUnitPlatform()
 }
