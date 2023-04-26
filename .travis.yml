@@ -15,9 +15,9 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r simpleboard *
+  - zip -r simple-board *
   - mkdir -p deploy
-  - mv simpleboard.zip deploy/simpleboard.zip
+  - mv simple-board.zip deploy/simple-board.zip
 
 deploy:
   - provider: s3
