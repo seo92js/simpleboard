@@ -15,9 +15,9 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r simple-board2 *
+  - zip -r simpleboard *
   - mkdir -p deploy
-  - mv simple-board.zip deploy/simple-board2.zip
+  - mv simpleboard.zip deploy/simpleboard.zip
 
 deploy:
   - provider: s3
@@ -29,7 +29,6 @@ deploy:
     acl: private # zip 파일 접근을 private으로
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
-    on-all_branches: true #해당 라인 추가
 
 # CI 실행 완료 시 메일로 알람
 notifications:
