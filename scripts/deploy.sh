@@ -10,8 +10,10 @@ cp $REPOSITORY/zip/*.jar $REPOSITORY/
 echo "> 현재 구동중인 애플리케이션 pid 확인"
 
 #CURRENT_PID=$(pgrep -fl simple-board | grep jar | awk '{print $1}')
-CURRENT_PID=$(pgrep -fl simple-board | grep java | awk '{print $1}')
-#CURRENT_PID=$(ps -ef | grep ${PROJECT_NAME} | grep jar | awk '{print $2}')
+#CURRENT_PID=$(pgrep -fl simple-board | grep java | awk '{print $1}')
+#CURRENT_PID=$(ps -ef | grep ${PROJECT_NAME} | grep jar | awk '{print $1}')
+#CURRENT_PID=$(ps -ef | grep ${PROJECT_NAME} | grep java | awk '{print $1}')
+CURRENT_PID=$(pgrep -l java | awk '{print $1}')
 
 echo "현재 구동중인 어플리케이션 pid: $CURRENT_PID"
 
